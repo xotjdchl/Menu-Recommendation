@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Menu Recommendation</title>
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <h1 class="text-bg-light rounded-3 p-3 text-center">Menu Recommendation</h1>
+        <div class="chat-content">
+            <div class="line">
+                <span class="chat-box">What do you want to eat?</span>
+            </div>
+        </div>
+        <div class="row">
+            <input class="chat-box col-10" id="input">
+            <button class="btn btn-outline-light col-2" id="send">전송</button>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector('#send').addEventListener('click', function(){
+            var template = '<div class="line"> <span class="chat-box mine">' + document.querySelector('#input').value + '</span> </div>';
+            document.querySelector('.chat-content').insertAdjacentHTML('beforeend', template);
+            document.querySelector('#input').value = '';
+        })
+    </script>
+</body>
+</html>
