@@ -10,23 +10,28 @@
 <body class="bg-dark">
     <div class="container">
         <h1 class="text-bg-light rounded-3 p-3 text-center">Menu Recommendation</h1>
-        <div class="chat-content">
+        <div class="chat-content" id="chat-messages">
             <div class="line">
-                <span class="chat-box">What do you want to eat?</span>
+                <span class="chat-box">Hello! What do you want to eat?</span>
+            </div>
+            <div class="line">
+                <span class="chat-box mine">I want to eat something spicy.</span>
             </div>
         </div>
-        <div class="row">
-            <input class="chat-box col-10" id="input">
-            <button class="btn btn-outline-light col-2" id="send">전송</button>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="input" placeholder="메시지를 입력하세요." aria-label="Type your message" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="send">Send</button>
         </div>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/chatbot.js"></script>
+    
     <script>
-        document.querySelector('#send').addEventListener('click', function(){
-            var template = '<div class="line"> <span class="chat-box mine">' + document.querySelector('#input').value + '</span> </div>';
-            document.querySelector('.chat-content').insertAdjacentHTML('beforeend', template);
-            document.querySelector('#input').value = '';
-        })
+        // document.querySelector('#send').addEventListener('click', function(){
+        //     var template = '<div class="line"> <span class="chat-box mine">' + document.querySelector('#input').value + '</span> </div>';
+        //     document.querySelector('.chat-content').insertAdjacentHTML('beforeend', template);
+        //     document.querySelector('#input').value = '';
+        // })
     </script>
 </body>
 </html>
