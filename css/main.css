@@ -23,13 +23,15 @@ div{
 .chat-box{
     background-color: white;
     border-radius: 10px;
-    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
     padding: 10px;
+    max-width: 70%;
+    display: block;
 }
 
 .chat-content{
     height: 350px;
     overflow-y: scroll;
+    padding: 10px;
 }
 
 .line {
